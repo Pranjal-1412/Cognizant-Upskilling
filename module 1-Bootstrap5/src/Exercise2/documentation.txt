@@ -1,0 +1,134 @@
+Exercise 2.1 — Bootstrap Structure and Files
+Aim
+
+To explore the structure of the downloaded Bootstrap directory and understand the purpose of the CSS, JS, and Icons folders.
+
+Requirements
+Bootstrap downloaded from:
+
+Bootstrap Official Website
+
+Extracted Bootstrap folder
+VS Code or any code editor
+Procedure
+Step 1: Download Bootstrap
+Open the Bootstrap website.
+Navigate to Download section.
+Download the compiled CSS and JS files.
+Extract the ZIP file.
+Step 2: Open the Extracted Folder
+
+After extraction, the Bootstrap directory contains folders like:
+
+bootstrap-5.x.x-dist/
+│
+├── css/
+├── js/
+└── icons/ (optional)
+Folder Explanation
+1. CSS Folder
+Structure
+css/
+│
+├── bootstrap.css
+├── bootstrap.min.css
+├── bootstrap.rtl.css
+└── bootstrap.rtl.min.css
+Purpose
+
+The CSS folder contains all Bootstrap styling files used for designing web pages.
+
+These files provide:
+
+responsive layout
+grid system
+colors
+typography
+spacing
+buttons
+forms
+cards
+alerts
+Important Files
+bootstrap.css
+Normal readable CSS file
+Used for learning and debugging
+bootstrap.min.css
+Minified version of Bootstrap CSS
+Faster loading
+Used in real projects
+
+Example:
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+bootstrap.rtl.css
+Used for Right-To-Left languages
+Example:
+Arabic
+Urdu
+Hebrew
+2. JS Folder
+Structure
+js/
+│
+├── bootstrap.js
+├── bootstrap.bundle.js
+├── bootstrap.min.js
+└── bootstrap.bundle.min.js
+Purpose
+
+The JS folder contains Bootstrap JavaScript files that enable interactive components.
+
+These components include:
+
+dropdowns
+modals
+accordions
+carousels
+navbar toggles
+tooltips
+Important Files
+bootstrap.js
+Readable JavaScript file
+Used for debugging
+bootstrap.min.js
+Compressed/minified JS version
+Used in production
+bootstrap.bundle.min.js
+Contains Bootstrap JS + Popper.js
+Recommended file for projects
+
+Example:
+
+<script src="js/bootstrap.bundle.min.js"></script>
+3. Icons Folder
+Structure
+icons/
+│
+├── fonts/
+└── bootstrap-icons.css
+Purpose
+
+Contains Bootstrap icons used in web pages.
+
+Examples:
+
+search icon
+user icon
+bell icon
+cart icon
+home icon
+Example Usage
+Link Icon CSS
+<link rel="stylesheet" href="icons/bootstrap-icons.css">
+Use Icon
+<i class="bi bi-house"></i>
+Observations
+Folder	Observation
+css	Contains styling files
+js	Contains interactive functionality
+icons	Contains Bootstrap icon library
+
+Result
+
+Successfully explored the Bootstrap directory structure and understood the purpose of CSS, JS, and Icons folders.

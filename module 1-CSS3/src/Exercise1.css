@@ -1,0 +1,25 @@
+/* Header styles */
+
+.header{
+    background-color: navy;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+
+/* Event card styles */
+
+.card{
+    background-color: white;
+    border: 1px solid gray;
+    margin: 15px;
+    padding: 10px;
+}
+
+
+/* Paragraph styles */
+
+p{
+    font-size: 18px;
+}

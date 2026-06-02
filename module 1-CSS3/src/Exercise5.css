@@ -1,0 +1,59 @@
+/* Page Font */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+
+/* Main Heading */
+
+.header{
+    text-align: center;
+}
+
+.header h1{
+    font-size: 36px;
+    font-weight: 600;
+    color: darkblue;
+}
+
+
+/* Event Heading */
+
+.eventInfo h2{
+    font-size: 28px;
+    font-style: italic;
+    color: darkgreen;
+}
+
+
+/* Description */
+
+.eventInfo p{
+
+    font-size: 18px;
+
+    text-align: justify;
+
+    line-height: 1.8;
+
+    letter-spacing: 1px;
+
+    text-transform: capitalize;
+}
+
+
+/* Notice Section */
+
+.notice h3{
+    font-size: 22px;
+    font-weight: bold;
+    color: brown;
+}
+
+.notice p{
+    font-size: 16px;
+    line-height: 1.6;
+}

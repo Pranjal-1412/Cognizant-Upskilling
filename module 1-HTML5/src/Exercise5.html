@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Event Registration</title>
+
+    <style>
+        body{
+            font-family: Tahoma, sans-serif;
+            background-color:#eef5ff;
+        }
+
+        .formBox{
+            width:450px;
+            margin:40px auto;
+            background:white;
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            text-align:center;
+            color:#1e3a5f;
+        }
+
+        label{
+            font-weight:bold;
+        }
+
+        input, select, textarea{
+            width:100%;
+            padding:8px;
+            margin-top:5px;
+            margin-bottom:15px;
+            border:1px solid #999;
+            border-radius:5px;
+        }
+
+        button{
+            background-color:#1e3a5f;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background-color:#294d7a;
+        }
+
+        output{
+            display:block;
+            margin-top:15px;
+            color:green;
+            font-weight:bold;
+        }
+    </style>
+
+    <script>
+        function showMessage() {
+            document.getElementById("msg").value =
+                "Registration submitted successfully!";
+        }
+    </script>
+
+</head>
+
+<body>
+
+<div class="formBox">
+
+    <h2>Event Registration Form</h2>
+
+    <form onsubmit="showMessage(); return false;">
+
+        <label>Full Name</label>
+        <input type="text"
+               placeholder="Enter your full name"
+               required
+               autofocus>
+
+        <label>Email Address</label>
+        <input type="email"
+               placeholder="example@gmail.com"
+               required>
+
+        <label>Event Date</label>
+        <input type="date" required>
+
+        <label>Select Event</label>
+        <select required>
+            <option value="">Choose Event</option>
+            <option>Clean City Campaign</option>
+            <option>Health Awareness Camp</option>
+            <option>Cultural Festival</option>
+            <option>Sports Meet</option>
+        </select>
+
+        <label>Message</label>
+        <textarea rows="4"
+                  placeholder="Write your message here"></textarea>
+
+        <button type="submit">Register</button>
+
+        <output id="msg"></output>
+
+    </form>
+
+</div>
+
+</body>
+</html>

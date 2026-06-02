@@ -1,0 +1,48 @@
+/* Page Styling */
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+
+/* Event Card */
+
+.eventCard{
+    border: 2px solid black;
+
+    padding: 20px;
+
+    margin: 20px 0;
+
+    background-color: #f2f2f2;
+}
+
+
+/* Form Fields */
+
+input{
+    padding: 8px;
+    border: 1px solid gray;
+}
+
+
+/* Outline Example */
+
+input:focus{
+    outline: 3px solid blue;
+}
+
+
+/* Visibility Hidden */
+
+.hiddenBox{
+    visibility: hidden;
+}
+
+
+/* Display None */
+
+.noneBox{
+    display: none;
+}

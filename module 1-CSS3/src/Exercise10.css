@@ -1,0 +1,80 @@
+/* Page Styling */
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+
+header{
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 2vh;
+}
+
+/* Navigation */
+
+nav{
+    background-color: lightgray;
+    text-align: center;
+    padding: 2vh;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+}
+
+/* Flexbox Layout */
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2vw;
+}
+
+/* Event Cards */
+
+.eventCard{
+    width: 25%;
+    border: 1px solid gray;
+    padding: 1vw;
+    margin: 1vw;
+    text-align: center;
+}
+
+.eventCard img{
+    width: 100%;
+    height: auto;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 768px){
+
+    nav a{
+        display: block;
+        margin: 10px 0;
+    }
+
+    .eventCard{
+        width: 90%;
+    }
+
+    h1{
+        font-size: 22px;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+}

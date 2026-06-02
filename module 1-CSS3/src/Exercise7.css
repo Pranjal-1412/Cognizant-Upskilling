@@ -1,0 +1,44 @@
+/* Page Heading */
+
+h1{
+    text-align: center;
+    color: darkblue;
+}
+
+
+/* Table Styling */
+
+table{
+    width: 80%;
+    margin: 20px auto;
+
+    border-collapse: collapse;
+
+    text-align: center;
+}
+
+
+/* Table Header */
+
+th{
+    background-color: #2e86de;
+    color: white;
+
+    border: 1px solid black;
+    padding: 12px;
+}
+
+
+/* Table Data */
+
+td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+/* Zebra Striping */
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}

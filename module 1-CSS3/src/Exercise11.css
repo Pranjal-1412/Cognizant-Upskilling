@@ -1,0 +1,27 @@
+/* Main Heading */
+
+h1{
+    text-align: center;
+    color: darkblue;
+}
+
+/* Event Card */
+
+.card{
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+
+    border: 2px solid gray;
+
+    text-align: center;
+
+    background-color: #f5f5f5;
+}
+
+/* Image */
+
+.card img{
+    width: 100%;
+    height: auto;
+}

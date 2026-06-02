@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Feedback</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        .box{
+            width: 450px;
+            padding: 20px;
+            border: 2px solid gray;
+            border-radius: 10px;
+        }
+
+        input, select, textarea{
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        img{
+            width: 200px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        button{
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+
+        function checkPhone(){
+            var phone = document.getElementById("phone").value;
+
+            if(phone.length != 10){
+                alert("Please enter a valid 10 digit phone number");
+            }
+        }
+
+        function showFee(){
+            var event = document.getElementById("event").value;
+            var fee = "";
+
+            if(event == "Sports")
+                fee = "Fee: Rs. 200";
+            else if(event == "Cultural")
+                fee = "Fee: Rs. 150";
+            else if(event == "Health Camp")
+                fee = "Fee: Rs. 100";
+
+            document.getElementById("fee").innerHTML = fee;
+        }
+
+        function submitFeedback(){
+            alert("Feedback Submitted Successfully");
+        }
+
+        function enlargeImage(){
+            document.getElementById("pic").style.width = "350px";
+        }
+
+        function countChars(){
+            var text = document.getElementById("feedback").value;
+            document.getElementById("count").innerHTML =
+            "Characters: " + text.length;
+        }
+
+    </script>
+
+</head>
+<body>
+
+<div class="box">
+
+    <h2>Event Feedback Form</h2>
+
+    <label>Phone Number</label>
+    <input type="text" id="phone" onblur="checkPhone()">
+
+    <label>Select Event</label>
+    <select id="event" onchange="showFee()">
+        <option>Select</option>
+        <option>Sports</option>
+        <option>Cultural</option>
+        <option>Health Camp</option>
+    </select>
+
+    <p id="fee"></p>
+
+    <label>Feedback</label>
+    <textarea id="feedback"
+              rows="4"
+              onkeyup="countChars()"></textarea>
+
+    <p id="count">Characters: 0</p>
+
+    <button onclick="submitFeedback()">
+        Submit
+    </button>
+
+    <br><br>
+
+    <h3>Double Click Image</h3>
+
+    <img src="event.jpg"
+         id="pic"
+         ondblclick="enlargeImage()"
+         alt="Event Image">
+
+</div>
+
+</body>
+</html>

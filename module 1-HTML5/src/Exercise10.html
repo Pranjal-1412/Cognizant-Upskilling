@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debugging Practice</title>
+
+    <style>
+        .box{
+            width: 300px;
+            padding: 20px;
+            background-color: lightblue;
+            border: 2px solid black;
+            margin: 30px auto;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+
+        function calculate(){
+
+            var a = 10;
+            var b = 20;
+            var sum = a + b;
+
+            console.log("Value of A = " + a);
+            console.log("Value of B = " + b);
+            console.log("Sum = " + sum);
+
+            document.getElementById("result").innerHTML =
+            "Sum = " + sum;
+        }
+
+    </script>
+
+</head>
+<body>
+
+<div class="box">
+
+    <h2>Debugging Demo</h2>
+
+    <button onclick="calculate()">
+        Calculate Sum
+    </button>
+
+    <p id="result"></p>
+
+</div>
+
+</body>
+</html>

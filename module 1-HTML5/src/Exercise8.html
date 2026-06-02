@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Preferences</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        .box{
+            width: 400px;
+            padding: 20px;
+            border: 2px solid gray;
+            border-radius: 10px;
+        }
+
+        select, button{
+            padding: 8px;
+            margin-top: 10px;
+        }
+    </style>
+
+    <script>
+
+        function savePreference(){
+
+            var eventType =
+            document.getElementById("eventType").value;
+
+            localStorage.setItem(
+                "preferredEvent",
+                eventType
+            );
+
+            sessionStorage.setItem(
+                "lastSelected",
+                eventType
+            );
+
+            alert("Preference Saved");
+        }
+
+        function loadPreference(){
+
+            var savedEvent =
+            localStorage.getItem("preferredEvent");
+
+            if(savedEvent){
+                document.getElementById("eventType").value =
+                savedEvent;
+            }
+        }
+
+        function clearPreference(){
+
+            localStorage.clear();
+            sessionStorage.clear();
+
+            alert("Preferences Cleared");
+
+            document.getElementById("eventType").value = "";
+        }
+
+    </script>
+
+</head>
+
+<body onload="loadPreference()">
+
+<div class="box">
+
+    <h2>Choose Your Preferred Event</h2>
+
+    <select id="eventType">
+        <option value="">Select Event</option>
+        <option value="Sports">Sports</option>
+        <option value="Cultural">Cultural</option>
+        <option value="Health Camp">Health Camp</option>
+        <option value="Tree Plantation">Tree Plantation</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="savePreference()">
+        Save Preference
+    </button>
+
+    <button onclick="clearPreference()">
+        Clear Preferences
+    </button>
+
+</div>
+
+</body>
+</html>

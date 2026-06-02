@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nearby Events</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button{
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+
+        #result{
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+
+        function findLocation(){
+
+            if(navigator.geolocation){
+
+                navigator.geolocation.getCurrentPosition(
+                    showPosition,
+                    showError,
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 5000,
+                        maximumAge: 0
+                    }
+                );
+
+            }
+            else{
+                document.getElementById("result").innerHTML =
+                "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position){
+
+            document.getElementById("result").innerHTML =
+            "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+        }
+
+        function showError(error){
+
+            switch(error.code){
+
+                case error.PERMISSION_DENIED:
+                    document.getElementById("result").innerHTML =
+                    "Location permission denied.";
+                    break;
+
+                case error.TIMEOUT:
+                    document.getElementById("result").innerHTML =
+                    "Location request timed out.";
+                    break;
+
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById("result").innerHTML =
+                    "Location information unavailable.";
+                    break;
+
+                default:
+                    document.getElementById("result").innerHTML =
+                    "Unknown error occurred.";
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<h2>Find Nearby Events</h2>
+
+<button onclick="findLocation()">
+    Find Nearby Events
+</button>
+
+<p id="result"></p>
+
+</body>
+</html>

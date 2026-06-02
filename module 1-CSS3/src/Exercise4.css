@@ -1,0 +1,48 @@
+/* Page Background */
+
+body{
+    background-color: #dfefff;   /* fallback color */
+    background-image: url("city.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Main Heading */
+
+.header{
+    text-align: center;
+    color: #003366;
+}
+
+
+/* Event Sections */
+
+.eventSection{
+    width: 70%;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 8px;
+}
+
+
+/* Section Headers with Gradient */
+
+.eventSection h2{
+    color: white;
+    padding: 10px;
+
+    background: linear-gradient(
+        to right,
+        #0066cc,
+        #00ccff
+    );
+}
+
+
+/* Paragraph Styling */
+
+.eventSection p{
+    color: #333333;
+}

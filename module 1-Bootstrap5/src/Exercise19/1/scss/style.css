@@ -1,0 +1,15 @@
+// /* Import Bootstrap */
+// @import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+/* Custom Variables */
+
+/* Change Primary Color */
+$primary: #ff5733;
+
+/* Change Border Radius */
+$border-radius: 20px;
+
+/* Import Bootstrap */
+@import "../node_modules/bootstrap/scss/bootstrap";
